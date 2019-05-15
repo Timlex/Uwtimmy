@@ -1,0 +1,57 @@
+<HTML lang = "en-us">
+<head>
+<meta charset = "utf-8">
+<title>Future Value Calculator</title>
+
+<script type = "text/javascript">
+
+//Write two functions to calculate future value.
+
+function doFV() {
+var princ = parseFloat(document.getElementById("inv").value);
+var annual = parseFloat(document.getElementById("rate").value);
+var numyrs = parseFloat(document.getElementById("yrs").value);
+var periodsPyear = parseFloat(document.getElementById("comps").value);
+
+document.getElementById("futureValue").value = "$" + computeFutureValue(princ,annual,numyrs,periodsPyear).toFixed(2);
+}
+
+function computeFutureValue(principal,annualRate,years,periodsPerYear) {
+
+return principal*Math.pow((1+annualRate/periodsPerYear),(periodsPerYear*years));
+
+}
+//The first function (doFV)
+//takes no parameters
+//is called from the onclick attribute
+//gets input from the user
+//calls the computeFutureValue function
+//displays the result to the user
+//The second function (computeFutureValue) computes and returns the future value of an investment. The formula for computing the future value of an investment is:
+//f = a (1 + r)n
+//where f is the future value, a is the investment amount sometimes called the principal, r is the growth rate per period, and n is the total number of periods throughout the life of the investment.
+
+
+</script>
+</head>
+
+<body>
+<div class = "dispute">
+<h2><u><b>Investment Calculator:</b></u></h2>
+<p>
+Amount Invested:(Principle)<br>
+$<input type = "text" id = "inv" size = "12"><br>
+Annual Rate: (example: .08)<br>
+<input type = "text" id = "rate" size = "3"><br>
+Number of Years:<br>
+<input type = "text" id = "yrs" size = "3"><br>
+Periods Per Year :<br>
+<input type = "text" id = "comps" size = "3">
+<p>
+<h3><b>Future Value: </b></h3><input type = "text" id = "futureValue"><br>
+<p>
+<button type = "button" onclick = "doFV()">Calculate Future Value</button><br>
+<p>
+</div>
+</body>
+</html>
