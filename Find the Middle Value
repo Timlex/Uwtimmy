@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Find the Middle Value</title>
+<script>
+/*Input: No input from user.
+      
+  Process: Write a defining table and a function that returns the value of the middle element in an array.  If the array has an even number of elements, then this function must return the average of the middle elements.
+   
+  Output: Displays the returns value of the middle element in array.
+     */
+
+ function getMiddle(list){
+
+     var list = [22, 23, 24, 44, 45, 50];
+     var length = list.length;
+     var index = (length - 1) % 2;
+if (index == 0){
+     value = (length - 1) / 2;
+     returnValue = list[value]
+}
+else{
+    value = Math.round(((length - 1) / 2))
+    value2 = value - 1;
+    returnValue = (list[value] + list[value2]) / 2;
+}
+
+document.getElementById('outputDiv').innerHTML = returnValue;
+}
+</script>
+</head>
+<body>
+<h1> Array list: 22, 23, 24, 44, 45, 50 </h1>
+<b2>Find the Middle Value</b2>
+<button type="button" onclick="getMiddle()">Compute</button>
+<div id="outputDiv"></div>
+</body>
+</html>
