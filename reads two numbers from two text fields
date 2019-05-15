@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title> reads two numbers from two text fields </title>
+<script>
+/* Input:
+ * Processing:
+ * Output:
+ */
+function findnamed fifteen()  {
+    var a = document.getElementById("one").value;
+    var b = document.getElementById("two").value;
+    var doTheMath = Number(a) + Number(b);
+
+    if ( a == 15 || b == 15)  {
+        alert("true");
+    }
+    else if (doTheMath == 15 ) {
+        alert("true");
+    }
+    else {
+        alert(a + ' + ' + b + ' = ' + doTheMath);
+    }
+    document.getElementById("output").innerHTML ;
+}
+</script>
+</head>
+
+<body>
+Please enter two numbers:
+<input type="text" id="one" size="5">
+<input type="text" id="two" size="5">
+<button type="button" onclick="">Click</button>
+<div id="output"></div>
+</body>
+</html>
