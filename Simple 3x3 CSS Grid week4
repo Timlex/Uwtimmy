@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Simple 3x3 CSS Grid</title>
+  </head>
+  .game-board {
+    display: grid;
+    grid-template-rows: 200px 200px 200px;
+    grid-template-columns: 200px 200px 200px;
+}
+
+// for some css stylings
+body {
+  display: flex;
+  justify-content: center;
+}
+.box {
+  background: #444;
+  border: 1px solid #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #AAA;
+}
+  <body>
+    <h1>Simple 3x3 CSS Grid</h1>
+    <p>This is a web page.</p>
+  </body>
+</html>
